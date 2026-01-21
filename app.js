@@ -2,23 +2,23 @@ let form = document.querySelector(".add-task")
 let addTaskBtn = document.getElementById("addtask-btn");
 let addTaskInput = document.getElementById("addtask-input");
 let errorMsg = document.querySelectorAll(".error-msg");
-// console.log(errorMsg[1].previousElementSibling);
 let ul = document.querySelector("ul");
 let modal = document.querySelector(".full");
 let cancelBtn = document.querySelector(".cancel-btn")
 let editTaskInput = document.querySelector(".modal").children[2].firstElementChild;
 let confirmBtn = document.querySelector(".confirm-btn");
 let deleteAllBtn = document.querySelector(".delete-all")
-console.log(confirmBtn);
+
+//When the user clicks on add task button this event triggers
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     errorMsg[1].style.display = "none"
+    //Checks condition for empty
     if (addTaskInput.value.trim() == "") {
-            errorMsg[1].style.display = "block"
-
-          console.log("hello");
+        errorMsg[1].style.display = "block"
         return
     }
+    //If condition is false the code below executes
     ul.innerHTML += `
     <li> <span>${addTaskInput.value}</span>
                         <div class="li-btns">
@@ -29,10 +29,12 @@ form.addEventListener("submit", (event) => {
     `
     addTaskInput.value = ""
 });
+// This event triggers when user clicks on delete button on task
 function deleteTaskFunc(btn) {
     btn.parentElement.parentElement.remove();
 }
-let task;
+let task; //It stores the li on which the user has click to edit
+//This event triggers and shows up the pop up for edit text 
 function editTaskFunc(btn) {
     errorMsg[0].style.display = "none"
     task = btn.parentElement.parentElement.firstElementChild
@@ -40,14 +42,14 @@ function editTaskFunc(btn) {
     toggleModal()
 }
 function changeTask(params) {
-    if (editTaskInput.value.trim()=="") {
-                errorMsg[0].style.display = "block"
-       return
+    if (editTaskInput.value.trim() == "") {
+        errorMsg[0].style.display = "block"
+        return
     }
     task.innerText = editTaskInput.value;
     toggleModal()
     Swal.fire({
-        width: 450, 
+        width: 450,
         position: "top-end",
         icon: "success",
         title: "Your Task has been edited",
