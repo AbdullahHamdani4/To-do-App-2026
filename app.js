@@ -88,6 +88,7 @@ function deleteAll() {
     });
 
 }
+//These are event listeners which works on clicks of different elements/buttons
 cancelBtn.addEventListener("click", toggleModal)
 confirmBtn.addEventListener("click", changeTask)
 deleteAllBtn.addEventListener("click", deleteAll)
