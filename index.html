@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <div class="full hide animate__animated ">
+        <div class="modal">
+            <button class="cancel-btn"><i class="fa-regular fa-circle-xmark"></i></button>
+            <h3>Edit Task</h3>
+            <div class="form">
+                <input type="text" placeholder="Edit your task..." class="edit-taskinput">
+                <p class="error-msg">Task cannot be empty</p>
+                <button class="confirm-btn">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="root">
+        <div class="container">
+            <div class="heading">
+                <h2>My To-Do List</h2>
+            </div>
+            <form class="add-task">
+                <input type="text" placeholder="Add a new task..." id="addtask-input">
+                <button id="addtask-btn" type="submit">Add Task</button>
+            </form>
+            <p class="error-msg hide">Task cannot be empty</p>
+            <div class="task-collection">
+                <ul>
+                    <!-- <li><span>Finish the report</span>
+                        <div class="li-btns">
+                            <button class="edit-btn" onclick="editTaskFunc(this)"><i class="fa-solid fa-pencil"></i>
+                                Edit</button>
+                            <button class="delete-btn" onclick="deleteTaskFunc(this)"><i
+                                    class="fa-regular fa-trash-can"></i> Delete</button>
+                        </div>
+                    </li>
+                    <li><span>Buy groceries</span>
+                        <div class="li-btns">
+                            <button class="edit-btn" onclick="editTaskFunc(this)"><i class="fa-solid fa-pencil"></i>
+                                Edit</button>
+                            <button class="delete-btn" onclick="deleteTaskFunc(this)"><i
+                                    class="fa-regular fa-trash-can"></i> Delete</button>
+                        </div>
+                    </li>
+                    <li><span>Call the docter</span>
+                        <div class="li-btns">
+                            <button class="edit-btn" onclick="editTaskFunc(this)"><i class="fa-solid fa-pencil"></i>
+                                Edit</button>
+                            <button class="delete-btn" onclick="deleteTaskFunc(this)"><i
+                                    class="fa-regular fa-trash-can"></i> Delete</button>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="delete-collection">
+                <button class="delete-all">Delete All</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

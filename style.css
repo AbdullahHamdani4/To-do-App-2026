@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+
+}
+
+.root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-height: 150px;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
+}
+
+.heading {
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.heading h2 {
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 1rem;
+}
+
+.add-task {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.add-task input {
+    width: 65%;
+    height: 31px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background: #f7f8fb;
+    border: 1px solid #e3e7f5;
+    padding-left: 8px;
+    font-size: 14px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.add-task input:focus {
+    outline: none;
+}
+
+.add-task button {
+    width: 30%;
+    height: 31px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.error-msg {
+    text-align: center;
+    color: #dc2626;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.task-collection {
+    margin-top: 5px;
+}
+
+.task-collection ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-collection ul li {
+    min-height: 35px;
+    border: 1px solid;
+    margin: 0 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 5px;
+    font-size: 13px;
+    border: 1px solid #babbbd;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    word-break: break-all;
+}
+
+.li-btns {
+    display: flex;
+    gap: 3px;
+    height: 23px;
+}
+
+.edit-btn {
+    padding: 0.2rem 0.3rem;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgb(167, 164, 164);
+    min-width: 55px;
+}
+
+.delete-btn {
+    padding: 0.2rem 0.3rem;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    background: #f12828;
+    color: rgb(221, 219, 219);
+    min-width: 65px;
+}
+
+.delete-collection {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-collection button {
+    width: 94%;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background: #f12828;
+    color: white;
+    font-size: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Modal styling */
+.full {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(145, 145, 145); */
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.modal {
+    /* color: white; */
+    background-color: rgb(224, 219, 219);
+    height: 180px;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal>h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cancel-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    font-size: 22px;
+    background-color: inherit;
+}
+
+.modal .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.modal>.form>input {
+    height: 30px;
+    width: 95%;
+    border-radius: 6px;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.modal>.form>button {
+    padding: 0.3rem 2rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: rgb(5, 172, 5);
+    font-size: 15px;
+}
+
+.hide {
+    display: none;
+}
