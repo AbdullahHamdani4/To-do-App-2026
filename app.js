@@ -41,13 +41,17 @@ function editTaskFunc(btn) {
     editTaskInput.value = task.innerText
     toggleModal()
 }
+//This event triggers when user clicks on confirm btn in the popup
 function changeTask(params) {
+    //Check for empty input
     if (editTaskInput.value.trim() == "") {
         errorMsg[0].style.display = "block"
         return
     }
-    task.innerText = editTaskInput.value;
-    toggleModal()
+    //If false then code below executes 
+    task.innerText = editTaskInput.value; //task gets edited
+    toggleModal() // Popup becomes display none
+    //A popup showing task edited on right top occurs
     Swal.fire({
         width: 450,
         position: "top-end",
@@ -57,10 +61,12 @@ function changeTask(params) {
         timer: 1500
     });
 }
+// This is a toggle func which is used to show and hide the pop up of the edit task
 function toggleModal() {
     modal.classList.toggle("animate__fadeIn")
     modal.classList.toggle("hide")
 }
+//The code below is delete all btn function which asks the user for confirmation if yes then   all the tasks get cleared
 function deleteAll() {
     Swal.fire({
         title: "Are you sure?",
